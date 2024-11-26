@@ -43,3 +43,192 @@ less than	<	8 < 10 → true
 greater than or equals	>=	8 >= 8 → true
 less than or equals	<=	8 <= 5 → false
 not equals	!=	5 != 5 → false
+
+LOGICAL OPERATORS
+operator	symbol	examples
+and	&&	true && true → true
+true && false → false
+false && false → false
+or	||	true || true → true
+true || false → true
+false || false → false
+not	!	!true → false
+!false → true
+
+VARIABLES 
+var name = value
+example: var x = 5
+x + 2 → 7
+then
+var y = true
+
+logical operators + variables : !y → false
+
+FUNCTIONS: 
+input -> output
+
+general structure:
+
+def functionName(var input) {
+	// code
+	return output
+}
+
+example f:
+
+def f(var x) {
+	return 2.0 * x
+}
+
+explaination 2 x (x) = 2(x)
+
+example isEven:
+
+def isEven(var n) {
+	return n % 2 == 0
+}
+
+output: 
+
+isEven(4) → true
+isEven(11) → false
+isEven(0) → true
+
+example xor:
+
+def xor(var a, var b) {
+	return (a && (!b)) || (b && (!a))
+}
+
+xor(true, false) → true
+xor(false, true) → true
+xor(true, true) → false
+xor(false, false) → false
+
+example applyThrice:
+
+def applyThrice(var fun, var v) {
+	return fun(fun(fun(v)))
+}
+
+SCOPE
+// x is not defined yet
+def foo(var x) {
+	// x is defined
+}
+// x is not in scope, and therefore not defined
+
+// x and z are not defined
+var z = 8
+// z is defined as 8, x is not defined
+def foo(var x) {
+	// x and z are is defined
+	var z = 7
+	// this z is shadowing the one we defined earlier
+	// if we refer to z here we will get 7
+}
+// only the original z remains
+// if we refer to z we will get 8
+
+Mutability
+
+// x is undefined
+var x = 0
+// x is defined as 0
+x = 3
+// x is defined as 3
+x = x + 2
+// x is defined as 5
+
+Data Types
+
+type	description	examples
+integer	n/a	1
+double	a number with a decimal point	1.0
+2.4
+boolean	see glossary	true
+string	a collection of characters in quotation marks	"hello world"
+"123*&@"
+array	a collection of values that can be accessed by index	[5, 4, 3, 2, 1]
+
+Arrays
+ examples:
+var l = [1, 2, 3, 4, 5]
+var stringArr = ["once", "upon", "a", "time"]
+stringArr[1] → "upon"
+
+Array Mutability (values of arrays can be changed)
+// l is undefined
+var l = [1, 2, 3]
+// l is defined as [1, 2, 3]
+l[1] = -1
+// l is defined as [1, -1, 3]
+l[2] = l[1] * l[2]
+// l is defined as [1, -1, -3]
+
+LOOPS: (run over code over and over again)
+ Different types of loops
+While Loops:
+
+while (condition) {
+	// code to run
+}
+
+example: 
+
+var x = 0
+var sum = 0
+// this code will run until x is greater than or equal to 4
+while (x < 4) {
+	// first, we add the current value of x to our sum
+	sum = sum + x
+	// then, we increase x by 1
+	x = x + 1
+}
+
+VALUE OF SUM
+
+sum | x | condition (x<4) | next sum (sum + x) | next x (x + 1)
+
+SIDE EFFECTS
+example: motor controlling code would be a side effect
+
+sensors: 
+speed(motor
+
+set speed: 
+set(motor, desiredSpeed)
+
+ CODE
+var motors = [motor1, motor2, motor3, motor4]
+   (function to call average of speeds of motor)
+def avgSpeed() {
+	return sumOutputs(motors, speed) / 4
+}
+
+def setAllMotors(var desiredSpeed) {
+	for (var motor : motors) {
+		set(motor, desiredSpeed)
+	}
+}
+
+def stopMotors() {
+	setAllMotors(0)
+} 
+ END
+
+If Statements
+(decide whether to run code on conditions based)
+
+if (condition) {
+	// code to run if condition is true
+}
+
+ (only when first condition is potentionally false)
+
+if (condition) {
+	// code to run if condition is true
+}
+else {
+	// code to run if condition is false
+}
