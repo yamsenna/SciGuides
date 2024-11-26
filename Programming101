@@ -1,1 +1,45 @@
+GOALS:
+arithmetic, logical, and comparison operations:
+/ + - *
+modulo (%)
+== > <
+and or not
+variables
+scope
+basic data types
+integers
+doubles
+booleans
+strings
+lists/arrays
+loops
+while loops
+for each loops
+functions
+if statements
 
+Comments: // words (example: // hello this is a comment
+
+OPERATIONS
+ -Arithmetic Operators
+name	symbol	example
+plus	+	5 + 9 → 14
+minus	-	8 - 4 → 4
+times	*	8 * 2 → 16
+divided by	/	20 / 4 → 5
+modulo	%	5 % 2 → 1
+
+MODULUS
+
+n	n % 2
+EVEN: 0
+ODD: 1
+
+COMPARISON OPERATORS
+name	symbol	example
+equals	==	5 == 5 → true
+greater than	>	8 > 8 → false
+less than	<	8 < 10 → true
+greater than or equals	>=	8 >= 8 → true
+less than or equals	<=	8 <= 5 → false
+not equals	!=	5 != 5 → false
