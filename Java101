@@ -1,0 +1,196 @@
+
+
+// function definitions:
+// You can define functions in any order within the file.
+//A function can be called from anywhere in the file, even if it's defined below.
+//Variable definitions (for variables defined outside of functions):
+//Variables can be used in any function, regardless of where the variable and function are defined in the file.
+// When defining a variable x, you can only reference other variables inside the definition if they are defined above x.
+
+// printing input
+  
+  public class Main {
+    public static void main(String[] args) {
+      System.out.println("Hello World");
+    }
+  }
+
+// console output
+
+>> Hello World
+
+ //  Operations
+  
+    Arithmetic Operators
+  name	symbol	example
+  plus	+	5 + 9 → 14
+  minus	-	8 - 4 → 4
+  times	*	8 * 2 → 16
+  divided by	/	20 / 4 → 5
+  modulo	%	5 % 2 → 1
+
+  // If Statements
+
+  (decide whether to run code on conditions based)
+
+  if (condition) {
+    // code to run if condition is true
+  }
+
+   (only when first condition is potentionally false)
+
+  if (condition) {
+    // code to run if condition is true
+  }
+  else {
+    // code to run if condition is false
+  }
+// Data Types
+integers
+doubles
+booleans
+
+allow u to identify types that are int, double, and boolean.
+
+  // Variables
+  type name = value;
+int x = 6;
+public class Main {
+  public static void main(String[] args) {
+    int x = 6;
+    System.out.println(x + 4);
+    System.out.println(x);
+    System.out.println(x % 2 == 0);
+  }
+}
+
+// Arrays
+{element1, element2, element3}
+public class Main {
+  static double[] arr = {4.5, 6, 9.0, 8};
+
+  public static void main(String[] args) {
+    // to find the length of an array, use array.length
+    System.out.println(arr.length);
+  }
+}
+ examples: 
+
+ public class Main {
+   static double[] arr = {4.5, 6, 9.0, 8};
+
+   public static void main(String[] args) {
+     // to find the length of an array, use array.length
+     System.out.println(arr.length);
+   }
+ }
+// 2D Arrays
+ example: tic tac board
+public class Main {
+  static int[][] board = new int[3][3];
+
+  public static void main(String[] args) {
+    // to start, let's extract the first row
+    // (aka the first element in the array)
+    int[] firstRow = board[0];
+    // now, we'll get the first value in that row
+    int firstVal = firstRow[0];
+    System.out.println(firstVal);
+  }
+}
+ OR
+
+   public class Main {
+     static int[][] board = new int[3][3];
+
+     public static void main(String[] args) {
+       int firstVal = board[0][0];
+       System.out.println(firstVal);
+     }
+   }
+
+// LOOPS
+
+while (condition) {
+  // code to run
+}
+syntax for each loop
+for (type element : collection) {
+  // code to run for each element
+   example of for each loop 
+
+     public class Main {
+       public static void main(String[] args) {
+         int[] fib = {1, 1, 2, 3, 5, 8, 13};
+         int sum = 0;
+         for (int e : fib) {
+           // add each element of fib to sum
+           sum = sum + e;
+         }
+         System.out.println(sum);
+       }
+     }
+
+}
+
+For Loops (closely related to while loop)
+
+  public class Main {
+    public static void main(String[] args) {
+      int[] arr = new int[100];
+      int index = 0;
+      while (index < 100) {
+        if (index % 2 == 0) {
+          arr[index] = 2;
+        } else {
+          arr[index] = 1;
+        }
+        index = index + 1;
+      }
+    }
+  }
+OR 
+  public class Main {
+    public static void main(String[] args) {
+      int[] arr = new int[100];
+      int index = 0;
+      while (index < 100) {
+        arr[index] = 2 - index % 2;
+        index = index + 1;
+      }
+    }
+  }
+
+explaination: 
+for (define variable; condition; code to update variable) {
+  // code to run
+}
+
+public class Main {
+  public static void main(String[] args) {
+    int[] arr = new int[100];
+    for (int index = 0; index < 100; index = index + 1) {
+      arr[index] = 2 - index % 2;
+    }
+  }
+}
+
+Functions -> Methods
+  
+  simplified version: 
+
+  static returnType name(argumentType argumentName) {
+    // code to run
+    return // value to return
+  }
+
+  example: 
+ f(x)=2x
+static double f(double x) {
+  return 2 * x;
+
+testing: 
+
+public static void main(String[] args) {
+  System.out.println("f(3): " + f(x));
+}
